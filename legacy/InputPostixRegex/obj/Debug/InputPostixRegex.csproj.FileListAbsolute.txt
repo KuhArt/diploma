@@ -1,0 +1,5 @@
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\slnChartPolishExpression\InputPostixRegex\bin\Debug\InputPostixRegex.exe
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\slnChartPolishExpression\InputPostixRegex\bin\Debug\InputPostixRegex.pdb
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\slnChartPolishExpression\InputPostixRegex\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\slnChartPolishExpression\InputPostixRegex\obj\Debug\InputPostixRegex.exe
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\slnChartPolishExpression\InputPostixRegex\obj\Debug\InputPostixRegex.pdb
