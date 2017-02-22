@@ -1,11 +1,11 @@
 'use strict'
 
 class ExprNameArray {
-  constructor (shortName, name, params  arrPolish) {
+  constructor (shortName, name, arrPolish) {
     this.shortName = shortName
     this.name = name
     this.arrPolish = arrPolish
   }
 }
 
-export default ExprNameArray
+module.exports = ExprNameArray
