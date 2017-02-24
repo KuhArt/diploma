@@ -52,7 +52,7 @@ function handleJoin (stack) {
 
 }
 
-module.exports.polishToTree = (polish) => {
+export const polishToTree = (polish) => {
   console.log(TreeChart);
   let stack = []
 

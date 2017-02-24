@@ -8,4 +8,4 @@ class ExprNameArray {
   }
 }
 
-module.exports = ExprNameArray
+export default ExprNameArray

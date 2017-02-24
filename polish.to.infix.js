@@ -12,7 +12,7 @@ function getTwoArgs (stack, separator) {
   stack.push(`(${arg1}${separator}${arg2})`)
 }
 
-module.exports.polishToInfix = (polish) => {
+export const polishToInfix = (polish) => {
   let stack = []
 
   polish.forEach((s) => {
