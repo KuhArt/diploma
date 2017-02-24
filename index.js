@@ -2,6 +2,7 @@
 
 const ExprNameArray = require('./expr.name.array')
 const {polishToInfix} = require('./polish.to.infix')
+const {polishToTree} = require('./polish.to.tree')
 
 console.log('Prompt 1: Enter the \'shortName\' for Polish Expression: ')
 
@@ -21,7 +22,7 @@ if (name.length <= 7 || !name) {
 
 let listPostfix = []
 
-let tokens = '"" a Join a Star Concat'
+let tokens = "a a 9 \"\" Join Join Star Concat"
 
 console.log("\nEnter a list of  tokens delimited Space for Polish Expression.");
 console.log("For example, Polish Expression for the identifiers is: ");
@@ -35,3 +36,4 @@ console.log("\na*{a|9|\"\"}\nor\na*{9|a}")
 console.log(polishToInfix)
 let arrPolish = tokens.split(' ').filter((token) => token)
 console.log('Result: ', polishToInfix(arrPolish))
+console.dir(polishToTree(arrPolish))
