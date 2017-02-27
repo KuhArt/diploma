@@ -734,7 +734,7 @@ namespace InputPostfixRegex
                     return s1;
 
             string join = s1 + "|" + s2 + "|";
-            int k = 0; 
+            int k = 0;
             for (int i = 0; i < join.Length; i += 2)
             {
                 k = i + 2;
