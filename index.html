@@ -11,8 +11,14 @@
 	<body>
 		<header class="header">
 			<h1>RegExp Diagram</h1>
-			<input  id="regex-input" class='regex-input' type="text" placeholder="Input RegExp in Polish Notation"/>
-			<button id="submit-button" type="button" class="submit-button">Submint</button
+			<div class='input-container'>
+			<input id="regex-input" class='regex-input' type="text" placeholder="Input RegExp in Polish Notation"/>
+			<span id="error-message" class="error-message"></span>
+			</div>
+			<button id="submit-button" type="button" class="submit-button">Submint</button>
+			<a href="#" id="download-button" class="download-button">
+				<img class="download-button-icon" src="./floppy-disk.png"/>
+			</a>
 		</header>
 		<div id="cy"></div>
 		<script src='dist/bundle.js'> </script>

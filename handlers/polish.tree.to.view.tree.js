@@ -16,12 +16,15 @@ function handleJoin (elements, {id, subTrees}) {
 }
 
 function handleStar (elements, {id, subTrees}) {
-  console.log(subTrees);
-  const [first] = subTrees
+   const [first] = subTrees
 
-   elements.edges.push({data: {source: id, target: first.id}})
-   elements.edges.push({data: {source: id, target: first.id, label: first.label}})
-   elements.edges.push({data: {source: first.id, target: id}})
+   elements.nodes.push({data: {id: `start${first.id}`, label: ++counter}})
+   elements.nodes.push({data: {id:`end${first.id}`, label: ++counter}})
+   elements.edges.push({data: {source: id, target: `start${first.id}`}})
+   elements.edges.push({data: {source: `start${first.id}`, target: `end${first.id}`}})
+   elements.edges.push({data: {source: `start${first.id}`, target: `end${first.id}`, label: first.label}})
+   elements.edges.push({data: {source: `end${first.id}`, target: `start${first.id}`}})
+   elements.edges.push({data: {source: `end${first.id}`, target: first.id}})
 }
 
 function handleElement (elements, {id, element, subTrees}) {
@@ -29,7 +32,6 @@ function handleElement (elements, {id, element, subTrees}) {
 
   switch (element) {
     case 'Concat':
-      console.log(element);
       return handleConcat(elements, {id, element, subTrees})
     case 'Join':
       return handleJoin(elements, {id, element, subTrees})
@@ -54,10 +56,6 @@ export const polishTreeToViewTree = (polishTree) => {
   }
 
   traverse(elements, polishTree)
-
-  const [lastNode] = elements.nodes.slice(-1)
-  elements.nodes.push({data: {id: 'finishNode', label: ++counter}})
-  elements.edges.push({data: {source: lastNode.data.id, target: 'finishNode'}})
 
   return elements
 }
